@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require foundation
+ *= require_tree . 
+ *= require_self
+*/
+// --------------------   Main CSS ------------------------- //
+
+$text_color: 					#303030;
+$anchor_color: 				#da6227;
+$anchor_color_light:  lighten($anchor_color, 10%);
+$blue_color:					#003e7e;
+$yellow_color: 				#ffca30;
+$bg_color: 						#f6f6f6;
+$table_border:				#cccccc;
+$ft_color:						#cccccc;
+
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+	-o-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin shadow($color-rgba: rgba(0, 0, 0, 0.1)) {
+	box-shadow: 				 0 1px 4px $color-rgba;
+	-o-box-shadow: 			 0 1px 4px $color-rgba;
+	-moz-box-shadow: 		 0 1px 4px $color-rgba;
+	-webkit-box-shadow:  0 1px 4px $color-rgba;
+}
+
+@mixin inshadow($color: #000) {
+	box-shadow: 				inset 0px 0px 8px $color;
+	-o-box-shadow: 			inset 0px 0px 8px $color;
+	-moz-box-shadow: 		inset 0px 0px 8px $color;
+	-webkit-box-shadow: inset 0px 0px 8px $color;
+}
+@mixin roundshadow($color: #c6cddc) {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset, -8px -8px 0 0 $color, 8px 8px 0 0 $color, 8px 0 0 0 $color, 0 8px 0 0 $color, 8px -8px 0 0 $color, -8px 8px 0 0 $color;
+	-o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset, -8px -8px 0 0 $color, 8px 8px 0 0 $color, 8px 0 0 0 $color, 0 8px 0 0 $color, 8px -8px 0 0 $color, -8px 8px 0 0 $color;
+	-ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset, -8px -8px 0 0 $color, 8px 8px 0 0 $color, 8px 0 0 0 $color, 0 8px 0 0 $color, 8px -8px 0 0 $color, -8px 8px 0 0 $color;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset, -8px -8px 0 0 $color, 8px 8px 0 0 $color, 8px 0 0 0 $color, 0 8px 0 0 $color, 8px -8px 0 0 $color, -8px 8px 0 0 $color;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset, -8px -8px 0 0 $color, 8px 8px 0 0 $color, 8px 0 0 0 $color, 0 8px 0 0 $color, 8px -8px 0 0 $color, -8px 8px 0 0 $color;
+}
+@mixin gradiant($color1: $anchor_color_light, $color2: $anchor_color) {
+	background-image: linear-gradient(				 top, $color1 0%, $color2 100%);
+	background-image: -o-linear-gradient(			 top, $color1 0%, $color2 100%);
+	background-image: -moz-linear-gradient(		 top, $color1 0%, $color2 100%);
+	background-image: -webkit-linear-gradient( top, $color1 0%, $color2 100%);
+	background-image: -ms-linear-gradient(		 top, $color1 0%, $color2 100%);
+}   
+@mixin textshadow(){
+	text-shadow: 0 1px rgba(0,0,0,0.4);
+}
+
+body {
+	background:url("bg.png");
+	font-family:'Lato';
+	font-size:14px;
+}
+
+header {padding:40px 0;}
+nav#main-nav {
+	ul {
+		float:right;
+		li {float:left;padding:5px 10px;
+		&:last-child{padding-right:0px;}
+			a {
+				@include rounded(3px);
+				@include gradiant();
+				padding:4px 8px 6px;
+				color:$blue_color;}
+		}
+	}
+}
+
+.orbit-wrapper {
+	.slider-nav {
+		opacity:0.4;
+		.left {left:-78px;}
+		.right {right:-78px;}
+	}
+}

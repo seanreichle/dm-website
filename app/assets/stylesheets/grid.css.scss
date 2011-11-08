@@ -1,0 +1,111 @@
+///* CSS Resets */
+//
+//html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+//
+//
+///* ==================================================================================================================== */
+///* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+///* ==================================================================================================================== */
+///* --------------------------------------------------
+//Container
+//-------------------------------------------------- */
+//div#container, div.container { position: relative; width: 100%; max-width: 1140px; min-width: 755px; margin: 0 auto; padding: 0; }
+//
+///* --------------------------------------------------
+//Grid
+//-------------------------------------------------- */
+//$margin				:	3.8%;
+//$one  				: 4.85%; 
+//$two  				: 13.45%; 
+//$three  			: 22.05%; 
+//$four  				: 30.75%; 
+//$five  				: 39.45%; 
+//$six  				: 48%; 
+//$seven  			: 56.75%; 
+//$eight  			: 65.4%; 
+//$nine  				: 74.05%; 
+//$ten  				: 82.7%; 
+//$eleven  			: 91.35%; 
+//$twelve  			: 100%; 
+//
+//.column-row, .row { margin: 0 0 18px 0; }
+//.column, .columns { float: left; display: inline; margin: 0 $margin 0 0; }
+// 
+//.one { 				width: $one; }
+//.two { 				width: $two; }
+//.three { 			width: $three; }
+//.four { 			width: $four; }
+//.five { 			width: $five; }
+//.six { 				width: $six; }
+//.seven { 			width: $seven; }
+//.eight { 			width: $eight; }
+//.nine { 			width: $nine; }
+//.ten { 				width: $ten; }
+//.eleven { 		width: $eleven; }
+//.twelve { 		width: $twelve; }
+//
+//.offset-by-one 		{			margin-left:$one 			+ $margin; }
+//.offset-by-two { 				margin-left: $two			+ $margin; }
+//.offset-by-three { 			margin-left: $three		+ $margin; }
+//.offset-by-four { 			margin-left: $four		+ $margin; }
+//.offset-by-five { 			margin-left: $five		+ $margin; }
+//.offset-by-six { 				margin-left: $six			+ $margin; }
+//.offset-by-seven { 			margin-left: $seven		+ $margin; }
+//.offset-by-eight { 			margin-left: $eight		+ $margin; }
+//.offset-by-nine { 			margin-left: $nine		+ $margin; }
+//.offset-by-ten { 				margin-left: $ten			+ $margin; }
+//
+//
+///* Clear the columns automagically, thanks @kneath */
+//.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+//* html .column-row, * html .row, * html .clearfix { height: 1%; }
+//.column-row, .row, .clearfix { display: inline-block; }
+//.column-row, .row, .clearfix { display: block; }
+
+b, strong {font-weight:bold;}
+.last {
+margin-right: 0px;
+}
+
+//img, object, embed {
+//max-width: 100%;
+//}
+
+img {
+	height: auto;
+	&.border {
+		max-width:98%;
+		border:3px solid #ccc;}
+}
+$width: 3.8%;
+.inpad {padding:0 $width/2;}
+.inpad.four { 			width: 30.75 	- $width	; }
+.inpad.five { 			width: 39.45 	- $width	; }
+.inpad.six { 				width: 48			- $width	; }
+.inpad.seven { 			width: 56.75	- $width	; }
+
+$big_pad	: 50px;
+$pad			:	20px;
+$small_pad:	10px;
+
+.relative {position:relative;}
+.marg-top { margin-top:$pad !important;}
+.marg-top-half { margin-top:$small_pad !important;}
+.marg-bot { margin-bottom:$pad !important;}
+.marg-bot-half { margin-bottom:$small_pad !important;}
+.pad-top-big { padding-top:$big_pad !important;}
+.pad-top { padding-top:$pad !important;}
+.pad-top-half { padding-top:$small_pad !important;}
+.pad-bot-big { padding-bottom:$big_pad !important;}
+.pad-bot { padding-bottom:$pad !important;}
+.pad-bot-half { padding-bottom:$small_pad !important;}
+.pad-left {padding-left:3.8% !important;}
+.pad-right {padding-right:3.8% !important;}
+.left {float:left;}
+.right {float:right;}
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+.text-center {text-align:center;}
+.clear {clear:both;}
+.hide-now {display:none;}
+.hidden {visibility:hidden;}

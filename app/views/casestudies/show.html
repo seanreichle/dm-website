@@ -1,0 +1,38 @@
+<div class="columns twelve pad-top">
+  <p id="notice"><%= notice %></p>
+  <h2><%= @casestudy.title %></h2>
+</div>
+<div class="row">
+  <div class="columns four">
+     <h4><em><%= @casestudy.tagline %></em></h4>
+    <p>
+      <b>Description:</b>
+      <%= @casestudy.description.html_safe %>
+    </p>
+    <p>
+      <b>Goals:</b>
+      <%= @casestudy.goals.html_safe %>
+    </p>
+
+    <p>
+      <b>Achievements:</b>
+      <%= @casestudy.achievements.html_safe %>
+    </p>
+
+    <p>
+      <b>Results:</b>
+      <%= @casestudy.results.html_safe %>
+    </p>
+  </div>
+  <div class="columns eight">
+    <div class="featured">
+      <div class="slides"><img src="http://dummyimage.com/639x400/bbb/fff" alt="" /></div>
+      <div class="slides"><img src="http://dummyimage.com/639x400/bbb/f00" alt="" /></div>
+      <div class="slides"><img src="http://dummyimage.com/639x400/bbb/0f0" alt="" /></div>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_casestudy_path(@casestudy) %> |
+<%= link_to 'Back', casestudies_path %>
